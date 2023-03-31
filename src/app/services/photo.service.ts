@@ -17,7 +17,7 @@ export class PhotoService {
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
-      quality: 100
+      quality: 720
     });
     this.photos.unshift({
       filepath: "soon...",
