@@ -12,5 +12,14 @@ import { CommonModule } from '@angular/common';
   imports: [IonicModule, ExploreContainerComponent, CommonModule]
 })
 export class Tab2Page {
+  photos = this.photoService.photos;
+  constructor(public photoService: PhotoService) { }
 
+  async ngOnInit() {
+    await this.photoService.loadSaved();
+  }
+
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
+  }
 }
