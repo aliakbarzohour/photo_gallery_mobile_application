@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Photo Gallery
+      About
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,23 +9,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Photo Gallery</ion-title>
+      <ion-title size="large">About</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="4" *ngFor="let photo of photoService.photos; index as position">
-        <ion-img [src]="photo.webviewPath"></ion-img>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <section>
+    <h2>About This Project</h2>
+    <hr>
+    <p>
+      If you are visiting this project, you should know why this project was created... <br>
+      This project was built and developed to work with the Ionic environment and get familiar with the multi-platform
+      coding environment, and solving the challenges that were in front of me helped me to get comfortable with this
+      environment.
+    </p>
+    <ion-button [routerLink]="['/tabs/tab2']">See Project</ion-button>
+  </section>
 
-
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="addPhotoToGallery()">
-      <ion-icon name="camera"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 
 </ion-content>
