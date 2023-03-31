@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   standalone: true,
-  imports: [IonicModule, ExploreContainerComponent]
+  imports: [IonicModule, ExploreContainerComponent, CommonModule]
 })
 export class Tab2Page {
 
